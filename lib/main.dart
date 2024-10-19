@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> _captureAndSave2() async {
     try {
       final String svgContent = _generateSvgContent();
-      final String? directoryPath = await getDirectoryPath();
+      final directoryPath = await getSaveLocation();
       if (directoryPath == null) {
         // Operation was canceled by the user.
         return;
